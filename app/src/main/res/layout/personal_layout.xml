@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+
+        android:background="@drawable/dashed"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/gray"
+            android:layout_height="60dp"
+            android:layout_gravity="top"
+
+            app:cardCornerRadius="40dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pfp"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:backgroundTint="@color/gray"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:layout_alignParentTop="true"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sarabun"
+                android:id="@+id/user_name"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/user_name"
+                android:textSize="15sp"
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sarabun"
+                android:id="@+id/description"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distance: within 100m"
+                android:layout_marginTop="8dp"
+                android:layout_below="@+id/description"
+                android:textSize="12sp"
+                android:layout_alignParentStart="true"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sarabun"
+                android:id="@+id/distance"
+                />
+            <ProgressBar
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distance"
+                android:layout_margin="5dp"
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressTint="@color/white"
+                android:progress="30"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/progressBar"
+                android:id="@+id/status"
+                >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawableStart="@drawable/reshot_icon_hot_coffee"
+                android:text="Coffee"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"
+                android:textSize="8sp"/>
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:padding="4dp"
+                android:drawableStart="@drawable/bag_02"
+                android:text="Business"
+                    android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:padding="4dp"
+                android:drawableStart="@drawable/friendship"
+                android:text="Friendship"
+                    android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:textSize="8sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBottom="@+id/progressBar"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="51dp"
+                android:layout_toEndOf="@+id/progressBar"
+                android:fontFamily="@font/sarabun"
+                android:maxLines="1"
+                android:text="Profile Score - 20%"
+                android:textColor="@color/white"
+                android:textSize="8sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite"
+                android:drawableStart="@drawable/baseline_add_24"
+                android:layout_alignParentTop="true"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:layout_alignParentEnd="true"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/sarabun"
+                android:id="@+id/invite"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/about"
+                android:text="about"
+                android:layout_below="@+id/status"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_margin="5dp"/>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
